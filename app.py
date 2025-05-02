@@ -4,6 +4,11 @@ import cv2
 
 app = Flask(__name__)
 
+# In your app.py
+@app.route('/test_get', methods=['GET'])
+def test_get():
+    return jsonify({"status": "GET request successful"})
+    
 @app.route('/test_opencv', methods=['POST'])
 def test_opencv():
     try:
